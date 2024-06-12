@@ -152,7 +152,8 @@ void exibeDevs() {
     cout << "Felipe Arosti       | Cod. 839913 | Criador do Menu Inicial\n";
     cout << "Leone Carpine       | Cod. 840588 | Criador da Seleção de Personagens\n";
     cout << "João Vitor Gardiano | Cod. 839588 | Criador da Exploração\n";
-    cout << "João Otávio Rufino  | Cod. 839753 | Criador \n";
+    cout << "João Otávio Rufino  | Cod. 839753 | Criador do Comabate\n";
+    cout << "Enzo Ricky Ferrari  | Cod. 839753 | Criador do Comabate\n";
 }
 
 void exibeMenuPer() {
