@@ -154,6 +154,7 @@ void exibeDevs() {
     cout << "João Vitor Gardiano | Cod. 839588 | Criador da Exploração\n";
     cout << "João Otávio Rufino  | Cod. 839753 | Criador do Comabate\n";
     cout << "Enzo Ricky Ferrari  | Cod. 839753 | Criador do Comabate\n";
+    cout << "João Pedro Rosa     | Cod. 840605 | Criador do Comabate\n";
 }
 
 void exibeMenuPer() {
