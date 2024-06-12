@@ -1,9 +1,36 @@
 #include <iostream>
 #include "hash.h"
+#include "InicioJogo.h"
 
 using namespace std;
 
-int main(){
+
+// Função principal
+int main() 
+{   int opcaoPrincipal;
+
+    // Loop principal
+    do
+    {
+        exibirMenuPrincipal();
+        cin >> opcaoPrincipal;
+
+        switch (opcaoPrincipal) {
+            case 1:
+                cout << "Iniciando o jogo..." << endl;
+                break;
+            case 2:
+                exibeDevs();
+                break;
+            case 3:
+                cout << "Saindo do jogo..." << endl;
+                return 0;
+            default:
+                cout << "Opção inválida. Tente novamente." << endl;
+        }
+    }while(opcaoPrincipal == 2);
+    
+
     int tam_vetor=5, max=11;
     Hash personagemhash(tam_vetor, max);
     int op;
@@ -18,25 +45,17 @@ int main(){
         
         /*----------------------------------------------MENU PERSONAGENS-----------------------------------------------*/
         
-        cout << "\n\n\n\n-------------------------------Menu de Personagem-------------------------------\n\n\n\n";
-        cout << "Digite 1 para criar um personagem\n";
-        cout << "Digite 2 para remover um personagem\n";
-        cout << "Digite 3 para selecionar um personagem\n";
-        cout << "Digite 4 para ver os personagem\n";
+        exibeMenuPer();
         cin >>op;
         
         if(op == 1){
             do{
-                cout << "\n\n\n\n-------------------------------Crie seu Personagem-------------------------------\n\n\n\n";
-                cout << "Informe o número da classe do personagem: \n";
-                cout << "1 - Guerreiro\n";
-                cout << "2 - Arqueiro\n";
-                cout << "3 - Assassino\n";
+                criePer();
                 cin >> classe;
                 
                 if(classe == 1){
-                    vida = 50;
-                    forca = 20;
+                    vida = 180;
+                    forca = 10;
                     break;
                     
                 }else if(classe == 2){
@@ -92,7 +111,7 @@ int main(){
         }else if(op == 4){
             cout << "\n\n\n\n-------------------------------Personagens-------------------------------\n\n\n\n";
             personagemhash.imprimir();
-            
+        }    
     }while(op != 0);
     
     cout << "O jogo ja vai começar............" << endl;
