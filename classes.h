@@ -1,22 +1,28 @@
-#include <iostream>
-using namespace std;
+#include "Classes.h"
 
-class Personagem{
+class Hash{
     private:
-        int id;
-        string nome;
-        int vida;
-        int forca;
-        int classe;
+    //função hash que receberá um obj personagem da classe Personagem
+    int FuncaoHash(Personagem personagem);
+    int max_per; //máximo de personagens da tabela hash
+    int max_posicoes; //máximo de posicoes da table hash
+    int qtd_per; //quantos personagens ja inseri
+    Personagem* estrutura; // vetor para guardar hash
     
-
     public:
-        Personagem();
-        Personagem(int id, string nome, int vida, int forca, int classe);
-        
-        int getId();
-        string getNome();
-        int getVida();
-        int getForca();
-        int getClasse();
+    //construtora
+    Hash(int tam_vetor, int max);
+    //destrutora
+    ~Hash();
+    //cheio
+    bool cheia();
+    //quantos personagens ja inseri
+    int tamanho();
+    //inserir dados
+    void inserir(Personagem personagem);
+    //remover dados
+    void remover(Personagem personagem);
+    //busca dados
+    void buscar(Personagem& personagem, bool& busca);
+    void imprimir();
 };
