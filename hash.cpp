@@ -49,7 +49,7 @@ using namespace std;
     {
         int local = FuncaoHash(personagem);
         if (estrutura[local].getId() != -1){
-            estrutura[local] = Personagem(-1, " ");
+            estrutura[local] = Personagem(-1, " ", 0, 0, 0);
             qtd_per --;
         }
     }
@@ -73,8 +73,20 @@ using namespace std;
         cout << "Personagens:\n";
         for(int i=0; i < max_posicoes; i++){
             if(estrutura[i].getId() != -1){
-                cout << i << ":" << estrutura[i].getId() << " ";
-                cout << estrutura[i].getNome() << endl;
+                cout << i << ":";
+                cout << "Nome: " << estrutura[i].getNome();
+                cout << "|ID: " << estrutura[i].getId();
+                cout << "|Vida: " << estrutura[i].getVida();
+                cout << "|Forca: " << estrutura[i].getForca();
+                
+                if(estrutura[i].getClasse() == 1)
+                    cout << "|Classe: Gurreiro\n\n";
+    
+                else if(estrutura[i].getClasse() == 2)
+                    cout << "|Classe: Arqueiro\n\n";
+        
+                else if(estrutura[i].getClasse() == 3)
+                    cout << "|Classe: Assassino\n\n";
             }
         }
     }
