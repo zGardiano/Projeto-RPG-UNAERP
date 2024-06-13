@@ -1,4 +1,4 @@
-// Link GitHub: https://github.com/zGardiano/Projeto-RPG-UNAERP/tree/main
+// Link GitHub: https://github.com/zGardiano/Projeto-RPG-UNAERP/blob/main/main.cpp
 
 #include <iostream>
 #include <cstdlib>
